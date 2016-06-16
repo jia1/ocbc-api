@@ -12,6 +12,7 @@ $('document').ready(function() {
   }).then(function(atm_json) {
     atm_array = atm_json['ATMS'];
   });
+  // Test the local json
 });
 
 function calculate_distance(lat1, lon1, lat2, lon2) {

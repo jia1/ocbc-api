@@ -1,11 +1,32 @@
 <html>
   <head>
     <title>OCBC ATM Locator by Jiayee</title>
-
-    
+    <link rel="stylesheet" type="text/css" href="bootstrap.css">
   </head>
-  <body> 
+  <body>
+    <div class="jumbotron text-center">
+      <h1>OCBC ATM Locator</h1>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="dropdown">
+            <button id="dLabel" type="button" data-toggle="dropdown" 
+              aria-haspopup="true" aria-expanded="false">
+              Location
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dLabel">
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <footer>&copy; Jiayee</footer>
+      </div>
+    </div>
     <script src="jquery-1.12.4.min.js"></script>
+    <script src="bootstrap.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
