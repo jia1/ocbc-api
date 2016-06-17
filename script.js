@@ -12,7 +12,12 @@ $('document').ready(function() {
   }).then(function(atm_json) {
     atm_array = atm_json['ATMS'];
   });
-  // Test the local json
+  var keys = Object.keys(postal["LOC-TO-DIST"]);
+  for (var i = 0; i < keys.length; i++) {
+    $('#general-locations').append(
+      '<li class="general-location">' + keys[i] + '</li>'
+    );
+  }
 });
 
 function calculate_distance(lat1, lon1, lat2, lon2) {
@@ -24,4 +29,14 @@ function calculate_distance(lat1, lon1, lat2, lon2) {
   var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a))
   var d = radius_earth * c // where R is the radius of the Earth
   console.log(d);
+}
+
+var postal = 
+{
+  "LOC-TO-DIST": {
+    "Serangoon Garden/Hougang/Punggol": "19"
+  },
+  "DIST-TO-SEC": {
+    "19": [53, 54, 55, 82]
+  }
 }
